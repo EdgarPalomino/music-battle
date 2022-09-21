@@ -369,11 +369,11 @@ video {
 }
 
 @keyframes slide-right {
-	from { transform: translate(-70%) }
+	from { transform: translate(-65%) }
 	to { }
 }
 
 @keyframes slide-left {
-	from { transform: translate(70%) }
+	from { transform: translate(60%) }
 	to { }
 }
