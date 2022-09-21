@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Watch - Music Battle </title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<!-- Creating the navbar !-->
+	<!-- Note: The divs with class "tile" are the ones that make the navlinks look like piano tiles !-->
+	<!-- Note: The return value (false) of the function playChord() is used to be able to play the "Musical Chord.mp3" audio before the link changes the current page !-->
+	<nav class="navbar fade-in">
+		<ul>
+			<li class="navlink home">
+				<a href="home.html" onclick="return playChord('Home')"> Home </a>
+				<div class="tile one"></div>
+				<div class="tile two"></div>
+			</li>
+			<li class="navtitle"> Music Battle </li>
+			<li class="navlink watch">
+				<a href="watch.html" onclick="return playChord('Watch')"> Watch </a>
+				<div class="tile three"></div>
+				<div class="tile four"></div>
+			</li>
+		</ul>
+	</nav>
+	<section class="content fade-in">
+		<video controls>
+			<source src="Music Battle.mp4" type="video/mp4"/>
+		</video>
+		<!--
+		<p id="fefe"> This is the Watch page! </p>
+		<button onclick="asd()"> asdfasdf </button>
+		!-->
+	</section>
+	<script src="script.js"></script>
+</body>
+</html>
