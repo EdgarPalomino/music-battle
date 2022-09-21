@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Home - Music Battle </title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<!-- Creating the navbar !-->
+	<!-- Note: The divs with class "tile" are the ones that make the navlinks look like piano tiles !-->
+	<!-- Note: The return value (false) of the function playChord() is used to be able to play the "Musical Chord.mp3" audio before the link changes the current page !-->
+	<nav class="navbar fade-in">
+		<ul>
+			<li class="navlink home">
+				<a href="index.html" onclick="return playChord('Home')"> Home </a>
+				<div class="tile one"></div>
+				<div class="tile two"></div>
+			</li>
+			<li class="navtitle"> Music Battle </li>
+			<li class="navlink watch">
+				<a href="watch.html" onclick="return playChord('Watch')"> Watch </a>
+				<div class="tile three"></div>
+				<div class="tile four"></div>
+			</li>
+		</ul>
+	</nav>
+	<!-- Creating the story section !-->
+	<!-- Note: The divs with class "story" are the ones that contain all of the text and photos for each stage of the story !-->
+	<!-- Note: The classes "first", "second" and "third" help identify the text and photos by the stage of the story they belong to !-->
+	<!-- Note: The class "slider" helps identify the text and photos that slide when the stage of the story changes !-->
+	<section class="content fade-in">
+		<div class="story start">
+			<p class="start-text first slider slide-right">
+				Read the story of Music Battle! &#8659;
+			</p>
+			<p class="friends-text first slider slide-right">
+				On a Monday afternoon, two friends decide to have a Music Battle after a long day of classes...
+			</p>
+			<img src="Friends Entering.jpg" class="friends-photo first slider slide-right"/>
+			<a class="right-button" onclick="changePart('Right First')"> &#8658; </a>
+		</div>
+		<div class="story middle">
+			<p class="soyuj-text second slider">
+				They have a fair fight for a while...
+			</p>
+			<img src="Soyuj Playing.jpg" class="soyuj-photo second slider"/>
+			<img src="Sashank Playing.jpg" class="sashank-photo second slider"/>
+			<p class="sashank-text second slider">
+				And get to showcase their skills...
+			</p>
+			<a class="left-button" onclick="changePart('Left Second')"> &#8656; </a>
+			<a class="right-button" onclick="changePart('Right Second')"> &#8658; </a>
+		</div>
+		<div class="story end">
+			<img src="Edgar Entering.jpg" class="edgar-photo third slider"/>
+			<p class="edgar-text third slider">
+				That is until a new challenger joins the Music Battle...
+			</p>
+			<a class="left-button" onclick="changePart('Left Third')"> &#8656; </a>
+			<p class="end-text third slider">
+				&#8657; Find out what happens next!
+			</p>
+		</div>
+	</section>
+	<script src="script.js"></script>
+</body>
+</html>
