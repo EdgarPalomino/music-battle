@@ -12,6 +12,7 @@
 body {
 	font-family: "Segoe UI";
 	background-color: #FFF1DC;
+	overflow: hidden; /* Hiding overflow for better display during animations */
 }
 
 
@@ -369,11 +370,11 @@ video {
 }
 
 @keyframes slide-right {
-	from { transform: translate(-50%) }
+	from { transform: translate(-70%) }
 	to { }
 }
 
 @keyframes slide-left {
-	from { transform: translate(50%) }
+	from { transform: translate(70%) }
 	to { }
 }
