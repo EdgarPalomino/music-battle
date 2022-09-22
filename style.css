@@ -10,7 +10,7 @@
 /* Setting the font family and background color of the website and hiding the overflow to have a better display during animations */
 
 body {
-	font-family: "Segoe UI", "Tahoma";
+	font-family: "Segoe UI", "Tahoma", sans-serif;
 	background-color: #FFF1DC;
 	overflow: hidden;
 }
