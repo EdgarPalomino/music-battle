@@ -7,12 +7,12 @@
 	padding: 0;
 }
 
-/* Setting the font family and background color of the website */
+/* Setting the font family and background color of the website and hiding the overflow to have a better display during animations */
 
 body {
 	font-family: "Segoe UI";
 	background-color: #FFF1DC;
-	overflow: hidden; /* Hiding overflow for better display during animations */
+	overflow: hidden;
 }
 
 
@@ -248,6 +248,7 @@ nav .four { right: 5.15% }
 
 /* Adding style to the film section */
 
+/* Setting the position of the "film" div to relative and the position of the video and all the text and photos to absolute to design the film section */
 
 .film {
 	position: relative;
@@ -267,8 +268,8 @@ nav .four { right: 5.15% }
 }
 
 .go-back-text {
-	top: 6%;
-	left: 3.5%;
+	top: 12%;
+	left: 6%;
 	width: 220px;
 	height: 78.5px;
 	background-color: black;
@@ -279,15 +280,15 @@ nav .four { right: 5.15% }
 
 video {
 	position: absolute;
-	top: 15%;
-	left: 20%;
+	top: 12%;
+	left: 24.3%;
 	width: 768px;
 	height: 432px;
 }
 
 .meet-text {
-	top: 15%;
-	right: 12.5%;
+	top: 12%;
+	right: 6%;
 	width: 220px;
 	height: 78.5px;
 	background-color: black;
@@ -297,35 +298,35 @@ video {
 }
 
 .soyuj-actor {
-	top: 33%;
-	right: 20%;
-}
-
-.sashank-actor {
-	top: 51%;
-	right: 20%;
-}
-
-.edgar-actor {
-	top: 69%;
-	right: 20%;
+	top: 30%;
+	left: 77.5%;
 }
 
 .soyuj-name {
-	top: 38%;
-	left: 81.5%;
+	top: 35%;
+	left: 85%;
 	font-size: 16pt;
+}
+
+.sashank-actor {
+	top: 48%;
+	left: 77.5%;
 }
 
 .sashank-name {
-	top: 56%;
-	left: 81.5%;
+	top: 53%;
+	left: 85%;
 	font-size: 16pt;
 }
 
+.edgar-actor {
+	top: 66%;
+	left: 77.5%;
+}
+
 .edgar-name {
-	top: 74%;
-	left: 81.5%;
+	top: 71%;
+	left: 85%;
 	font-size: 16pt;
 }
 
@@ -377,4 +378,17 @@ video {
 @keyframes slide-left {
 	from { transform: translate(70%) }
 	to { }
+}
+
+/* Creating the class and animation to slide-up */
+
+.slide-up {
+	animation-name: slide-up;
+	animation-duration: 1.4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+	from { transform: translateY(70%) }
+	to {  }
 }
