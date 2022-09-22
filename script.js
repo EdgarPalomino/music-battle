@@ -2,7 +2,7 @@
 
 var audio = new Audio("Musical Chord.mp3");
 
-// Function that plays the Musical Chord audio, makes the current page fade-out and then changes the current page to a new page
+// Function that plays the Musical Chord audio, makes the current web page fade-out and then changes it to a new page
 
 function playChord(buttonPressed) {
 
@@ -15,7 +15,19 @@ function playChord(buttonPressed) {
 
 }
 
-// Function that changes the old page to the new page
+// Function that makes the current web page fade-out
+
+function fadeOutPage() {
+
+	let navbar = document.getElementsByClassName("navbar")[0];
+	let content = document.getElementsByClassName("content")[0];
+
+	navbar.className = navbar.className.replace(" fade-in", " fade-out");
+	content.className = content.className.replace(" fade-in", " fade-out");
+
+}
+
+// Function that changes the current web page to a new page
 
 function changePage(buttonPressed) {
 
@@ -29,23 +41,11 @@ function changePage(buttonPressed) {
 
 }
 
-// Function that makes the old page fade-out
-
-function fadeOutPage() {
-
-	let navbar = document.getElementsByClassName("navbar")[0];
-	let content = document.getElementsByClassName("content")[0];
-
-	navbar.className = navbar.className.replace(" fade-in", " fade-out");
-	content.className = content.className.replace(" fade-in", " fade-out");
-
-}
-
-// Note: The new page will fade-in by itself
+// Note: The new page will fade-in by itself because of the CSS settings
 
 // -------------------------------------------------- \\
 
-// Function that changes the old part to the new part
+// Function that changes the current part of the story to a new part
 
 function changePart(buttonPressed) {
 
@@ -55,7 +55,7 @@ function changePart(buttonPressed) {
 
 }
 
-// Function that hides the current part
+// Function that hides the current part of the story
 
 function hidePart(buttonPressed) {
 
@@ -74,7 +74,7 @@ function hidePart(buttonPressed) {
 
 }
 
-// Function that shows the new part
+// Function that shows the new part of the story
 
 function showPart(buttonPressed) {
 
@@ -92,6 +92,8 @@ function showPart(buttonPressed) {
 	part.style.visibility = "visible";
 
 }
+
+// Function that makes the text and photos from the new part of the story slide-in
 
 function slidePart(buttonPressed) {
 
@@ -129,3 +131,5 @@ function slidePart(buttonPressed) {
 	}
 
 }
+
+// Note: The function will also find out if the text and photos should slide-in from the left or right
